@@ -5,6 +5,6 @@ import com.example.kt_jpa.model.entities.Order;
 
 public interface OrderService {
     Order createOrder(OrderDTO dto);
-    String updateOrder(OrderDTO dto);
+    String updateOrder(OrderDTO dto, String id);
 
 }

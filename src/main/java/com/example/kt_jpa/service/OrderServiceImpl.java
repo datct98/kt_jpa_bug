@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.sql.SQLException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
@@ -79,9 +80,10 @@ public class OrderServiceImpl implements OrderService{
     }
 
     @Override
-    public String updateOrder(OrderDTO dto) {
+    public String updateOrder(OrderDTO dto, String id) {
         return null;
     }
+
 
     private double totalPrice(Set<ProductDTO> products){
 

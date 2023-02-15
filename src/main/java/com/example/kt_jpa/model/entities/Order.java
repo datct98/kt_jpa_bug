@@ -9,7 +9,7 @@ import lombok.Setter;
 import java.util.Date;
 import java.util.Set;
 
-@Table(name = "order")
+@Table(name = "orders")
 @Entity
 @Getter
 @Setter
@@ -30,8 +30,8 @@ public class Order {
     private Date estimateTime;
     private String status;
     private double price;
-    @OneToMany(mappedBy = "order")
-    private Set<Vote> votes;
+    /*@OneToMany(mappedBy = "order")
+    private Set<Vote> votes;*/
     @JsonManagedReference
     @OneToMany(mappedBy = "order")
     private Set<Product> products;

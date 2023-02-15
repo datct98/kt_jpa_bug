@@ -22,7 +22,7 @@ public class Vote {
     @JoinColumn(name = "shipper_id")
     private Shiper shiper;
     @JsonManagedReference
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "order_id")
     private Order order;
     private double rate;
